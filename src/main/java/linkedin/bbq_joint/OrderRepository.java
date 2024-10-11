@@ -10,15 +10,15 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class OrderRepository {
 
-  private Map<UUID, Order> orders = new TreeMap<>();
+  private final Map<UUID, Order> orders = new TreeMap<>();
 
-  public Order save(Order order) {
+  public Order save(final Order order) {
     order.setId(UUID.randomUUID());
     orders.put(order.getId(), order);
     return order;
   }
 
-  public Optional<Order> findById(UUID id) {
+  public Optional<Order> findById(final UUID id) {
     if (!orders.containsKey(id)) {
       return Optional.empty();
     }

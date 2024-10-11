@@ -34,6 +34,8 @@ Content-Type: application/json
 
 GET http://localhost:8080/menu-items?drink=true
 
+
+
 ### 
 
 GET http://localhost:8080/menu-items

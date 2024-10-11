@@ -1,0 +1,23 @@
+###
+
+POST http://localhost:8080/order-items
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "drink": {
+    "id": "00000000-0000-0000-0000-000000000002",
+    "name": "Freddy's Lemonade",
+    "price": 5,
+    "drink": true
+  },
+  "food": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "name": "Freddy's Ribs Special",
+    "price": 20
+  }
+}
+
+###
+
+GET http://localhost:8080/order-items/8801f377-152c-4d9e-bccd-d8c4e8dee575
